@@ -6,6 +6,9 @@ function validateEmail(email) {
 var emailToReset = "";
 var nameForRequest = "";
 
+var emailFilled = false;
+var nameFilled = false;
+
 function captureName(element) {
   checkEmpty(element);
   nameForRequest = element.value;
@@ -35,8 +38,10 @@ function validate(emailID) {
       case 'forget-pass-exampleInputEmail1':
         if (email.endsWith('hdfc.com')) {
           emailToReset = email;
+          emailFilled = true;
           $('#forgot-pass-id-email').removeClass('wrong-entry');
         } else {
+          emailFilled = false;
           $('#forgot-pass-id-email').addClass('wrong-entry');
         }
         break;
@@ -66,7 +71,9 @@ function checkEmpty(ele) {
     case "exampleInputEmail1-fullName":
       if (elementContent.length == 0) {
         $('#id-namereq').addClass('wrong-entry');
+        nameFilled = false;
       } else {
+        nameFilled = true;
         $('#id-namereq').removeClass('wrong-entry');
       }
       break;
@@ -87,6 +94,10 @@ $(document).ready(function() {
     var nameToInject = "";
     if (nameForRequest.length != 0) {
       nameToInject = nameForRequest;
+    }
+    if(!nameFilled) {
+      alert('Please fill in your name');
+      return
     }
     $(".inject-name").text(nameToInject);
     $(".request-access").css("display", "none");
@@ -127,6 +138,11 @@ $("#resetButton").click(() => {
   var emailMessage = "";
   if (emailToReset.length != 0)
     emailMessage = emailToReset;
+  
+  if(!emailFilled) {
+    alert('Please fill in your email ending with hdfc.com');
+    return;
+  }
 
   $(".forgot-password").css("display", "none");
   $(".reset-password").css("display", "block");
