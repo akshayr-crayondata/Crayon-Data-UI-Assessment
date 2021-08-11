@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Crayon-Assessment-UI</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="left">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/tasteStudio.png" alt="taste studio img">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Taste Studio</h5>
+            <p class="carousel-desc">AI powered personalization engine dedicated to understanding human tastes</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/engageStudio.png" alt="engage studio img">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Engage Studio</h5>
+            <p class="carousel-desc">AI powered personalization engine dedicated to understanding human tastes</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/commerceStudio.png" alt="commerce studio img">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Commerce Studio</h5>
+            <p class="carousel-desc">AI powered personalization engine dedicated to understanding human tastes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="first-rectangle">
+      <img src='images/Maya logo.png' class="maya-img" alt='Maya.ai logo' />
+      <p class="maya-text">AI powered personalization engine dedicated to understanding human tastes</p>
+    </div>
+
+    <div class="center-rectangle login-page">
+      <form action="" method="">
+        <div class="form-group textInput-div" id="id-email">
+          <label for="exampleInputEmail1" class="textInput-label">Login</label>
+          <input type="text" class="textInput-placeholder" id="exampleInputEmail1" placeholder="Email ID" onfocusout="validate(document.getElementById('exampleInputEmail1'))">
+        </div>
+        <div class="form-group textInput-div" id="id-pass">
+          <label for="exampleInputPassword1" class="textInput-label">Password</label>
+          <input type="password" class="textInput-placeholder" id="exampleInputPassword1" placeholder="Credential" onfocusout="checkEmpty(document.getElementById('exampleInputPassword1'))">
+        </div>
+        <div class="form-ending">
+          <div class="custom-control custom-checkbox form-check form-ending">
+            <input type="checkbox" class="custom-control-input form-check-input" id="exampleCheck1">
+            <label class="custom-control-label form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+          <button type="submit" id="sign-in-btn" class="btn btn-primary form-ending submit-button">Sign in</button>
+        </div>
+      </form>
+      <div class="other-links">
+        <a href="#" class="link password-lost underline">Lost your password?</a>
+        <p class="lost-pass-2">
+          Not a member yet? <a href="#" class="link request-link underline">Request access</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="center-rectangle  make-center-rectangle-disappear forgot-password">
+      <div class="icon-heading">
+        <img src="images/passLock.png" class="makeInline" alt="lock icon">
+        <p class="icon-heading-text makeInline">Forgot Password</p>
+      </div>
+      <form id="reset-Form" action="" method="">
+        <div class="form-group textInput-div" id="forgot-pass-id-email">
+          <label for="exampleInputEmail1" class="textInput-label">Email ID</label>
+          <input type="text" name="emailReset" class="textInput-placeholder" id="forget-pass-exampleInputEmail1" placeholder="@hdfc.com" onfocusout="validate(document.getElementById('forget-pass-exampleInputEmail1'))">
+        </div>
+        <div class="form-ending">
+          <div class="form-ending">
+            <label class="login-redirect" for="exampleCheck1">Go back to <a href="#" class="link login">Login</a></label>
+          </div>
+          <button id="resetButton" class="btn btn-primary form-ending submit-button" type="button">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="center-rectangle make-center-rectangle-disappear reset-password">
+      <div class="icon-heading">
+        <img src="images/passLock.png" class="makeInline" alt="lock icon">
+        <p class="icon-heading-text makeInline">Forgot Password</p>
+      </div>
+      <div class="confirmation-Text">
+        <p class="confirmationText-firstHalf">Email has been sent to your inbox (<span class="inject-email"></span>) with magic link to reset your credential.</p>
+        <p class="second-reset-text">
+          Reset magic link is valid for the <span class="make-bold">next 30 minutes</span>
+        </p>
+        <label>Go back to <a href="#" class="link reset-login make-bold">Login</a></label>
+      </div>
+    </div>
+
+    <div class="center-rectangle make-center-rectangle-disappear request-access">
+      <div class="icon-heading">
+        <img src="images/requestImg.png" class="makeInline" alt="lock icon">
+        <p class="icon-heading-text makeInline">Request for access</p>
+      </div>
+      <form action="" method="">
+        <div class="form-group textInput-div request-access-divs" id="id-namereq">
+          <label class="textInput-label request-field-labels">Name</label>
+          <input type="text" class="textInput-placeholder textInput-placeholder-req" id="exampleInputEmail1-fullName" placeholder="Full Name" onfocusout="captureName(document.getElementById('exampleInputEmail1-fullName'))">
+        </div>
+        <div class="form-group textInput-div request-access-divs" id="id-emailreq">
+          <label class="textInput-label request-field-labels">Email ID</label>
+          <input type="text" class="textInput-placeholder textInput-placeholder-req" id="exampleInput-email" placeholder="@hdfc.com" onfocusout="validate(document.getElementById('exampleInput-email'))">
+        </div>
+        <div class="form-group textInput-div request-access-divs" id="id-text-req">
+          <label class="textInput-label request-field-labels">Reason for request</label>
+          <textarea rows=4 class="textInput-placeholder textInput-placeholder-req" id="exampleInput-text" placeholder="Brief your requirements and approval"></textarea>
+        </div>
+        <div class="form-ending">
+          <div class="custom-control custom-checkbox form-check form-ending">
+            <input type="checkbox" class="custom-control-input form-check-input" id="acc-exampleCheck1">
+            <label class="form-check-label request-email-send custom-control-label" for="acc-exampleCheck1">Send me an email copy</label>
+          </div>
+          <button type="button" id="sign-in-btn-req" class="btn btn-primary form-ending submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="center-rectangle make-center-rectangle-disappear request-message">
+      <div class="icon-heading">
+        <img src="images/requestImg.png" class="makeInline" alt="lock icon">
+        <p class="icon-heading-text makeInline">Request for access</p>
+      </div>
+      <div class="confirmation-Text">
+        <p class="confirmationText-firstHalf">
+          Thanks <span class="inject-name"></span> for your interest, We have <strong>requested admin</strong> to verify and approval. Watchout your email for welcome email with magic link for us.</p>
+        <p class="second-reset-text">
+          You can also write to us at <span class="make-bold underline">admin@maya.ai</span>
+        </p>
+        <label>Go back to <a href="#" class="link request-login">Login</a></label>
+      </div>
+    </div>
+
+    <div class="bottom-rectangle">
+      <img src="images/logo.png" class="crayon-img makeInline" alt="crayon-logo">
+      <span class="makeInline footer-text">
+        ©2020 All Rights Reserved by Crayon Data Pte Ltd and it's registered trademark maya.ai
+      </span>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

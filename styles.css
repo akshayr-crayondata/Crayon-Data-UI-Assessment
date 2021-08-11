@@ -1,0 +1,342 @@
+
+/* METROPOLIS FONT FACES */
+
+@font-face {
+  font-family: 'Metropolis-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis Bold'), url('fonts/Metropolis-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis-Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis Black'), url('fonts/Metropolis-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis Regular'), url('fonts/Metropolis-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis-SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis SemiBold'), url('fonts/Metropolis-SemiBold.woff') format('woff');
+}
+
+
+/* LEFT SIDE OF THE PAGE */
+
+.left {
+  position: absolute;
+  width: 66.7%;
+  text-align: center;
+  background-color: #F7F7F7;
+}
+
+.left img {
+  width: 100%;
+  height: 100vh;
+}
+
+/* STYLING CAROUSEL ITEM HEADING */
+.carousel-item h5 {
+  color: black;
+  font-family: Metropolis-SemiBold;
+  font-size: 16px;
+}
+
+/* STYLING CAROUSEL ITEM DESCRIPTION */
+.carousel-desc {
+  margin-left: 23%;
+  color: #1C2C42;
+  font-family: Metropolis-Regular;
+  font-size: 14px;
+  width: 55%;
+}
+
+/* STYLING CAROUSEL INDICATORS */
+.carousel-indicators li{
+  height: 5px;
+  width: 5px;
+  opacity: 1;
+  margin: 0 0.5%;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.carousel-indicators .active {
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: black;
+  width: 20px;
+}
+
+/* RIGHT SIDE OF THE PAGE */
+
+.right {
+  position: relative;
+  left: 66.7%;
+  background-color: white;
+  font-family: Metropolis-Regular;
+  width: 33.3%;
+  height: 100vh;
+}
+
+/*
+The right half of the page is segmented into three rectangles: first, center and bottom */
+
+/* FIRST RECTANGLE */
+
+.first-rectangle {
+  padding: 10% 7% 5%;
+}
+
+.maya-img {
+  height: 50px;
+  width: 80px;
+  border-radius: 0;
+}
+
+.maya-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 5% 0 5%;
+  color: #1C2C42;
+}
+
+/* CENTER RECTANGLE */
+
+.textInput-div {
+  margin: 0 8% 4% 7%;
+  padding: 1% 2.5% 1%;
+  border: 1px solid #E9EBEF;
+  border-radius: 7px;
+}
+
+.textInput-label {
+  color: #575E6B;
+  font-size: 12px;
+  line-height: 8px;
+  font-weight: 400;
+}
+
+.textInput-placeholder {
+  font-weight: 600;
+  opacity: 0.3;
+  font-size: 14px;
+  border: none;
+  line-height: 14px;
+  width: 100%;
+  padding: 0.2% 0;
+  display: block;
+}
+
+.form-ending {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  display:inline;
+}
+
+.form-check {
+  margin: 5% 4.8% 5% 6.7%;
+}
+
+.form-check-label {
+  padding-top: 1.2%;
+  color: #516078;
+}
+
+.submit-button {
+  margin-left: 26%;
+  padding: 2% 7% 2%;
+  background-color: #141414;
+  border-radius: 0;
+}
+
+.submit-button:hover {
+  background-color: #141414;
+}
+
+.other-links {
+  padding: 0 7%;
+  font-size: 13px;
+  margin-top: 10%;
+  color: #516078;
+  margin-bottom: 0;
+}
+
+
+/* PASSWORD RESET PAGE */
+
+#resetButton {
+  background-color: #141414;
+  margin-left: 27%;
+}
+
+.icon-heading {
+  margin: 0 7% 3% 7%;
+}
+
+.icon-heading img {
+  width: 15px;
+  height: 20px;
+}
+
+.icon-heading-text {
+  font-family: Metropolis-SemiBold;
+  font-size: 16px;
+}
+
+.login-redirect {
+  margin: 0 7% 3% 7%;
+  color: #516078;
+}
+
+/* CONFIRMATION PAGE */
+
+.confirmation-Text {
+  margin: 5% 10%;
+  padding-left: 2%;
+  font-size: 14px;
+  font-style: Metropolis-Regular;
+}
+
+.confirmationText-firstHalf {
+  margin-bottom: 4%;
+}
+
+.inject-email {
+  font-size: 14px;
+  font-style: Metropolis-Bold;
+  font-weight: 600;
+}
+
+/* REQUEST ACCESS PAGE  */
+
+.request-access img, .request-message img {
+  width: 22px;
+}
+
+.textInput-placeholder-req {
+  opacity: 1;
+  font-size: 12px;
+  padding-bottom: 0.3%;
+  font-family: Metropolis-SemiBold;
+  letter-spacing: 0.2px;
+}
+
+/* MAKING PLACEHOLDER TEXT DARKER */
+.textInput-placeholder-req::-webkit-input-placeholder { color: #152542; }  /* WebKit, Blink, Edge */
+.textInput-placeholder-req:-moz-placeholder { color: #152542; }  /* Mozilla Firefox 4 to 18 */
+.textInput-placeholder-req::-moz-placeholder { color: #152542; }  /* Mozilla Firefox 19+ */
+.textInput-placeholder-req:-ms-input-placeholder { color: #152542; }  /* Internet Explorer 10-11 */
+.textInput-placeholder-req::-ms-input-placeholder { color: #152542; }  /* Microsoft Edge */
+
+
+.request-access-divs {
+  margin-bottom: 3%;
+  padding: 0.2% 1.5%;
+  border: 1.5px solid #152542;
+}
+
+.request-field-labels {
+  font-size: 11px;
+  color: #152542;
+}
+
+.request-email-send {
+  font-family: Metropolis-SemiBold;
+  color: #152542;
+  letter-spacing: 0.2px;
+  font-size: 12px;
+}
+
+
+#sign-in-btn-req {
+  margin-left: 15%;
+}
+
+
+/* BOTTOM RECTANGLE (FOOTER) */
+
+.bottom-rectangle {
+  margin: 2% 2%;
+  position: fixed;
+  bottom: 0;
+  padding-right: 1%;
+}
+
+.footer-text {
+  color: #141414;
+  font-size: 12px;
+  line-height: 0;
+}
+
+.crayon-img {
+  height: 48px;
+  float: left;
+  margin-right: 4%;
+  background-image: url(images/logo.png);
+}
+
+/* EXTRA CSS CLASSES APPLIED FOR BETTER PRESENTATION */
+
+textarea {
+  resize: none;
+}
+
+.custom-control-input:checked+label::after {
+  background-color: #152542;
+}
+
+.custom-control-input {
+  visibility: hidden;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  border-color: #141414;
+}
+
+/* APPLIED WHEN INVALID CONTENT IS ENTERED */
+.wrong-entry {
+  border: 2px solid red;
+}
+
+.make-center-rectangle-disappear {
+  display: none;
+}
+
+.make-bold {
+  font-family: Metropolis-SemiBold;
+}
+
+.link {
+  color:inherit;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: inherit;
+}
+
+.makeInline {
+  display: inline;
+}
+
+
+input:focus, textarea:focus {
+  outline: none;
+}
